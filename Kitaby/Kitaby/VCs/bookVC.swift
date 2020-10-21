@@ -8,10 +8,12 @@
 
 import UIKit
 
+ var cart: [Book] = []
+
 class bookVC: UIViewController {
 
     var book1: Book!
-    var cart: [Book] = []
+   
     
     @IBOutlet weak var bookImg: UIImageView!
     @IBOutlet weak var bookNameLabel: UILabel!
@@ -27,7 +29,7 @@ class bookVC: UIViewController {
         bookPriceLabel.text = "\(book1.price)"
         bookDescriptionLabel.text = book1.description
         navigationBar.title = book1.name
-        
+        checkBooks()
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +39,15 @@ class bookVC: UIViewController {
         print(cart)
         sender.isEnabled = false
         
+        
+    }
+    
+    func checkBooks (){
+        for i in cart {
+            if i.name == book1.name {
+                addToCart.isHidden = true
+            }
+        }
     }
     
     /*
