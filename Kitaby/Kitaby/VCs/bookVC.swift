@@ -38,7 +38,7 @@ class bookVC: UIViewController {
         cart += [book1]
         print(cart)
         sender.isEnabled = false
-        
+        sender.setImage(UIImage(systemName: "cart.fill"), for: .normal)
         
     }
     

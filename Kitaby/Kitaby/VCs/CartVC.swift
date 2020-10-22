@@ -11,22 +11,24 @@ import UIKit
 class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var tableview: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        totalPriceLabel.text = "\(total)"
-        // Do any additional setup after loading the view.
-    }
-     
     var totalPrice: [Double] = []
     var total: Double = 0.0
     
-    func totalPrice (booksPrice: Double) {
-        for i in cart {
-            totalPrice.append(i.price)
-        }
-       total = totalPrice.reduce(0, +)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+      
+        
+        // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        total = cart.map{$0.price}.reduce(0, +)
+        totalPriceLabel.text = "\(total)"
+        tableview.reloadData()
+    }
+  
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -38,6 +40,9 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! cartCell
+        
+        cell.configure(cart: cart[indexPath.row])
+        
         return cell
     }
     

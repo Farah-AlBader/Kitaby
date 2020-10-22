@@ -18,6 +18,16 @@ class lastVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationItem.hidesBackButton = false
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationItem.hidesBackButton = true
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     /*
     // MARK: - Navigation
 
