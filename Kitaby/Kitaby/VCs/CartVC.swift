@@ -10,10 +10,22 @@ import UIKit
 
 class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var totalPriceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        totalPriceLabel.text = "\(total)"
         // Do any additional setup after loading the view.
+    }
+     
+    var totalPrice: [Double] = []
+    var total: Double = 0.0
+    
+    func totalPrice (booksPrice: Double) {
+        for i in cart {
+            totalPrice.append(i.price)
+        }
+       total = totalPrice.reduce(0, +)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
