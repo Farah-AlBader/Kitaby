@@ -1,5 +1,5 @@
 //
-//  lastVC.swift
+//  accountVC.swift
 //  FirebaseTemplate
 //
 //  Created by Mac on 10/22/20.
@@ -8,15 +8,17 @@
 
 import UIKit
 
-class lastVC: UIViewController {
-
-    @IBOutlet weak var thankYouLabel: UILabel!
+class accountVC: UIViewController {
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
+        
     }
+    
+
     
     /*
     // MARK: - Navigation

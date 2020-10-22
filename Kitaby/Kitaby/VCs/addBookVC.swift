@@ -1,5 +1,5 @@
 //
-//  lastVC.swift
+//  addBookVC.swift
 //  FirebaseTemplate
 //
 //  Created by Mac on 10/22/20.
@@ -8,16 +8,21 @@
 
 import UIKit
 
-class lastVC: UIViewController {
+class addBookVC: UIViewController {
 
-    @IBOutlet weak var thankYouLabel: UILabel!
+    @IBOutlet weak var bookNameLabel: UITextField!
+    @IBOutlet weak var categoryLabel: UITextField!
+    @IBOutlet weak var PriceLabel: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     
+
     /*
     // MARK: - Navigation
 
