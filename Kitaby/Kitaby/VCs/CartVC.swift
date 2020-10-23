@@ -25,7 +25,7 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     override func viewWillAppear(_ animated: Bool) {
         total = cart.map{$0.price}.reduce(0, +)
-        totalPriceLabel.text = "\(total)"
+        totalPriceLabel.text = "\(total) K.D."
         tableview.reloadData()
     }
   

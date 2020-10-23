@@ -26,7 +26,7 @@ class bookVC: UIViewController {
         super.viewDidLoad()
         bookImg.image = UIImage(named: book1.image)
         bookNameLabel.text = book1.name
-        bookPriceLabel.text = "\(book1.price)"
+        bookPriceLabel.text = "\(book1.price) K.D."
         bookDescriptionLabel.text = book1.description
         navigationBar.title = book1.name
         checkBooks()

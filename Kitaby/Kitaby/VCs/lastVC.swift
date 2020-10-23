@@ -20,12 +20,15 @@ class lastVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationItem.hidesBackButton = false
-        navigationController?.isNavigationBarHidden = false
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
-        navigationController?.isNavigationBarHidden = true
+       
+    }
+    @IBAction func backToHomeButton(_ sender: UIButton) {
+        cart = []
     }
     
     /*
