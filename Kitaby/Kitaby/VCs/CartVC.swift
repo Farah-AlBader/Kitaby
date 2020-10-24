@@ -34,7 +34,7 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
     @IBAction func completeButton(_ sender: Any) {
         if cart.count == 0 {
-            errorMessage(message: "your cart is empty! add some books don't be shy 😉")
+            errorMessage(message: "your cart is empty! \n Don't be shy add some books 😉")
         }
         
     }
