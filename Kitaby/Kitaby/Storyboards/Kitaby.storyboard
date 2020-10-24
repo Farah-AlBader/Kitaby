@@ -753,7 +753,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EA4-iD-265"/>
-                                    <segue destination="U2n-6X-Com" kind="show" identifier="goToSignUp" id="LYT-NC-jzm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-h8-Odb">
@@ -766,7 +765,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhL-rx-FCU"/>
-                                    <segue destination="gcC-oa-R95" kind="show" identifier="goToLogIn" id="DZd-8C-c0P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -777,6 +775,8 @@
                     <connections>
                         <outlet property="logInButton" destination="A8V-h8-Odb" id="cEH-gR-nde"/>
                         <outlet property="signUpButton" destination="G2A-GL-e3c" id="xZj-3W-HnH"/>
+                        <segue destination="gcC-oa-R95" kind="show" identifier="goToLogIn" id="dTO-ui-1eH"/>
+                        <segue destination="U2n-6X-Com" kind="show" identifier="goToSignUp" id="nAP-wZ-9JP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
