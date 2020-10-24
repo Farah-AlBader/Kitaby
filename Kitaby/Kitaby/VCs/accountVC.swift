@@ -14,9 +14,6 @@ class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var myBook: [Book] = []
     
-    
-    
-    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -61,6 +58,27 @@ class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    @IBAction func signOut(_ sender: Any) {
+       let alertController = UIAlertController(title: "Sign out!", message: "Are you sure you want to sign out?" , preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        let okAction = UIAlertAction(title: "Sign out!", style: .destructive) { action in
+            Networking.signOut(success: {
+                // Goes back to the previous presented Modally view controller (SignInVC)
+                self.performSegue(withIdentifier: "signedOut", sender: nil)
+//                self.dismiss(animated: true, completion: nil)
+            })
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true)
+    }
+    
+    func errorMessage(message: String){
+        let alertController = UIAlertController(title: "Opps🙈", message: message , preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myBook.count
@@ -78,9 +96,11 @@ class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "myBookDetails" {
         let book = sender as! Book
         let vc = segue.destination as! MyBookDetailsVC
         vc.book2 = book
+        } 
     }
     /*
     // MARK: - Navigation

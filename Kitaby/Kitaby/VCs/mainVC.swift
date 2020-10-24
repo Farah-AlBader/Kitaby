@@ -29,6 +29,16 @@ class mainVC: UIViewController {
     @IBAction func logIn(_ sender: Any) {
         performSegue(withIdentifier: "goToLogIn", sender: nil)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationItem.hidesBackButton = false
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.isHidden = true
+    }
     /*
     // MARK: - Navigation
 
