@@ -20,6 +20,7 @@ class addBookVC: UIViewController {
     
     let uid = Networking.getUserId()!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +34,7 @@ class addBookVC: UIViewController {
         let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
         Networking.createItem(book, inCollection: "users/\(uid)/books") {
             print("yaaaaaaay🥳")
+            self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
         }
         
         if categoryLabel.text == "children" {
@@ -50,5 +52,12 @@ class addBookVC: UIViewController {
         }else {
             print("this category is unavailable at the moment")
         }
+    }
+    
+    func errorMessage(message: String){
+        let alertController = UIAlertController(title: "Opps🙈", message: message , preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
 }
