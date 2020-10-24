@@ -33,7 +33,17 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
   
     @IBAction func completeButton(_ sender: Any) {
+        if cart.count == 0 {
+            errorMessage(message: "your cart is empty! add some books don't be shy 😉")
+        }
         
+    }
+    
+    func errorMessage(message: String){
+        let alertController = UIAlertController(title: "Opps🙈", message: message , preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
