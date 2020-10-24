@@ -17,18 +17,21 @@ class bookVC: UIViewController {
     @IBOutlet weak var bookImg: UIImageView!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var bookPriceLabel: UILabel!
-    @IBOutlet weak var bookDescriptionLabel: UILabel!
     @IBOutlet weak var addToCart: UIButton!
+    @IBOutlet weak var bookWriterLabel: UILabel!
     @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    @IBOutlet weak var bookDiscrition: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
         bookImg.image = UIImage(named: book1.image)
         bookNameLabel.text = book1.name
         bookPriceLabel.text = "\(book1.price) K.D"
-        bookDescriptionLabel.text = book1.description
         navigationBar.title = book1.name
+        bookWriterLabel.text = book1.writer
+        bookDiscrition.text = book1.description
 
         checkBooks()
         // Do any additional setup after loading the view.

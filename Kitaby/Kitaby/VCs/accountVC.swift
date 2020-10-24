@@ -21,13 +21,13 @@ class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+     self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
         let uid = Networking.getUserId()!
         Networking.getListOf(COLLECTION_NAME: "users/\(uid)/books") { (book: [Book]) in
             self.myBook = book
             print(self.myBook)
             self.tableView.reloadData()
-            
+            print(self.myBook)
            // print (self.myBook)
         }
         

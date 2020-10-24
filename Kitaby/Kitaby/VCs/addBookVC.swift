@@ -12,6 +12,7 @@ import Firebase
 class addBookVC: UIViewController {
 
     @IBOutlet weak var bookNameLabel: UITextField!
+    @IBOutlet weak var bookWriterName: UITextField!
     @IBOutlet weak var categoryLabel: UITextField!
     @IBOutlet weak var PriceLabel: UITextField!
     @IBOutlet weak var bookDescription: UITextField!
@@ -20,13 +21,14 @@ class addBookVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func addBookButton(_ sender: Any) {
-        let book = Book(name: bookNameLabel.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescription.text!)
+        let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescription.text!)
         Networking.createItem(book, inCollection: "users/\(uid)/books") {
+            
             print("yaaaaaaay🥳")
         }
         if categoryLabel.text == "children" {
@@ -38,6 +40,9 @@ class addBookVC: UIViewController {
         }else if categoryLabel.text == "romance"{
             romance.append(book)
             print("\(romance)")
+        }else if categoryLabel.text == "Fantasy"{
+            fantasy.append(book)
+            print(fantasy)
         }else {
             print("this category is unavailable at the moment")
         }

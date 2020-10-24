@@ -20,7 +20,7 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        
+         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
