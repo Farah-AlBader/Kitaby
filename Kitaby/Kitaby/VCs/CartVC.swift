@@ -32,6 +32,9 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
   
+    @IBAction func completeButton(_ sender: Any) {
+        
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

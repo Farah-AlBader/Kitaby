@@ -1,19 +1,15 @@
 //
-//  bookVC.swift
+//  MyBookDetailsVC.swift
 //  FirebaseTemplate
 //
-//  Created by Mac on 10/20/20.
+//  Created by Mac on 10/24/20.
 //  Copyright © 2020 OMAR. All rights reserved.
 //
 
 import UIKit
 
- var cart: [Book] = []
-
-class bookVC: UIViewController {
-
-    var book1: Book!
-    
+class MyBookDetailsVC: UIViewController {
+  
     @IBOutlet weak var bookImg: UIImageView!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var bookPriceLabel: UILabel!
@@ -21,36 +17,21 @@ class bookVC: UIViewController {
     @IBOutlet weak var addToCart: UIButton!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
+    var book2: Book!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bookImg.image = UIImage(named: book1.image)
-        bookNameLabel.text = book1.name
-        bookPriceLabel.text = "\(book1.price) K.D"
-        bookDescriptionLabel.text = book1.description
-        navigationBar.title = book1.name
-
-        checkBooks()
+        bookImg.image = UIImage(named: book2.image)
+        bookNameLabel.text = book2.name
+        bookPriceLabel.text = "\(book2.price) K.D"
+        bookDescriptionLabel.text = book2.description
+        navigationBar.title = book2.name
+        
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addToCartButton(_ sender: UIButton) {
-        
-        cart += [book1]
-        print(cart)
-        sender.isEnabled = false
-        sender.setImage(UIImage(systemName: "cart.fill"), for: .normal)
-        
-    }
-    
-    func checkBooks (){
-        for i in cart {
-            if i.name == book1.name {
-                addToCart.isHidden = true
-            }
-        }
-    }
-    
+
     /*
     // MARK: - Navigation
 
