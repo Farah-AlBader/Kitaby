@@ -33,11 +33,11 @@ class addBookVC: UIViewController {
        
         check()
         
-        let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
-        Networking.createItem(book, inCollection: "users/\(uid)/books") {
-            print("yaaaaaaay🥳")
-            self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
-        }
+//        let book = Book(name: bookNameLabel.text ?? "", writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
+//        Networking.createItem(book, inCollection: "users/\(uid)/books") {
+//            print("yaaaaaaay🥳")
+//            self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
+//        }
         
         if categoryLabel.text == "children" {
             childrenBooks.append(book)
@@ -66,7 +66,12 @@ class addBookVC: UIViewController {
         if bookNameLabel.text == "" || bookWriterName.text == "" || bookDescreption.text == "" || PriceLabel.text == "" || categoryLabel.text == "" {
             
             errorMessage2(message: "You have to fill all the book information to continue 🤔")
-            
+        }else {
+            let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
+            Networking.createItem(book, inCollection: "users/\(uid)/books") {
+                print("yaaaaaaay🥳")
+                self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
+            }
         }
     }
     
