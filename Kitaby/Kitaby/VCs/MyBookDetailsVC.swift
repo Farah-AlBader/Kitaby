@@ -10,10 +10,10 @@ import UIKit
 
 class MyBookDetailsVC: UIViewController {
   
-    @IBOutlet weak var bookImg: UIImageView!
+   
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var bookPriceLabel: UILabel!
-    @IBOutlet weak var addToCart: UIButton!
+    
     @IBOutlet weak var bookWriterLabel: UILabel!
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var bookDescription: UITextView!
@@ -23,7 +23,6 @@ class MyBookDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
-        bookImg.image = UIImage(named: book2.image)
         bookNameLabel.text = book2.name
         bookPriceLabel.text = "\(book2.price) K.D"
         bookDescription.text = book2.description
