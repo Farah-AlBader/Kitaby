@@ -31,13 +31,13 @@ class addBookVC: UIViewController {
     
     @IBAction func addBook(_ sender: Any) {
        
-        check()
+       // check()
         
-//        let book = Book(name: bookNameLabel.text ?? "", writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
-//        Networking.createItem(book, inCollection: "users/\(uid)/books") {
-//            print("yaaaaaaay🥳")
-//            self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
-//        }
+        let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
+        Networking.createItem(book, inCollection: "users/\(uid)/books") {
+            print("yaaaaaaay🥳")
+            self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
+        }
         
         if categoryLabel.text == "children" {
             childrenBooks.append(book)
@@ -62,18 +62,13 @@ class addBookVC: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true)
     }
-    func check () {
-        if bookNameLabel.text == "" || bookWriterName.text == "" || bookDescreption.text == "" || PriceLabel.text == "" || categoryLabel.text == "" {
-            
-            errorMessage2(message: "You have to fill all the book information to continue 🤔")
-        }else {
-            let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
-            Networking.createItem(book, inCollection: "users/\(uid)/books") {
-                print("yaaaaaaay🥳")
-                self.errorMessage(message: "You have added this book for all peaople to buy successfully! 📖")
-            }
-        }
-    }
+//    func check () {
+//        if bookNameLabel.text == "" || bookWriterName.text == "" || bookDescreption.text == "" || PriceLabel.text == "" || categoryLabel.text == "" {
+//
+//            errorMessage2(message: "You have to fill all the book information to continue 🤔")
+//
+ //      }
+//    }
     
     func errorMessage2(message: String){
         let alertController = UIAlertController(title: "Opps🙈", message: message , preferredStyle: .alert)
