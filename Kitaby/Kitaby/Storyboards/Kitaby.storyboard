@@ -103,13 +103,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xid-yV-rxV">
                                 <rect key="frame" x="0.0" y="50" width="414" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-SO-fgv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.91358596089999999" green="0.88675421480000005" blue="0.850974381" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05w-g8-7MR">
                                 <rect key="frame" x="20" y="458" width="291" height="39"/>
@@ -159,6 +153,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XU3-sp-RTB">
+                                <rect key="frame" x="4" y="94" width="406" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.91358596089999999" green="0.88675421480000005" blue="0.850974381" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="IMK-D9-25J"/>
@@ -168,7 +166,7 @@
                     <connections>
                         <outlet property="addToCart" destination="0QH-m0-rEf" id="eev-Dx-ghU"/>
                         <outlet property="bookDiscrition" destination="ClJ-Tp-lNh" id="DpW-pq-7sr"/>
-                        <outlet property="bookImg" destination="6Bf-SO-fgv" id="7Ae-38-Nk9"/>
+                        <outlet property="bookImg" destination="XU3-sp-RTB" id="6Hl-Q2-Sn7"/>
                         <outlet property="bookNameLabel" destination="05w-g8-7MR" id="fFi-tT-Nrf"/>
                         <outlet property="bookPriceLabel" destination="M5o-75-TMn" id="Bea-nV-O0E"/>
                         <outlet property="bookWriterLabel" destination="Lz0-Ns-IvR" id="wQA-zk-ycn"/>
