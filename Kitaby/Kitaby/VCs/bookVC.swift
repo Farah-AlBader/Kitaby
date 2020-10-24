@@ -41,6 +41,7 @@ class bookVC: UIViewController {
         
         cart += [book1]
         print(cart)
+        errorMessage(message: "You have added this book successfully to your cart 📖")
         sender.isEnabled = false
         sender.setImage(UIImage(systemName: "cart.fill"), for: .normal)
         
@@ -54,6 +55,12 @@ class bookVC: UIViewController {
         }
     }
     
+    func errorMessage(message: String){
+        let alertController = UIAlertController(title: "done ✔", message: message , preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
     /*
     // MARK: - Navigation
 
