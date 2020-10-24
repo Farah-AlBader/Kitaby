@@ -10,26 +10,21 @@ import UIKit
 import ALCameraViewController
 import Firebase
 
+var myBook: [Book] = []
+
 class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var myBook: [Book] = []
+    
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logOut: UIButton!
     
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
      self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
-        let uid = Networking.getUserId()!
-        Networking.getListOf(COLLECTION_NAME: "users/\(uid)/books") { (book: [Book]) in
-            self.myBook = book
-            print(self.myBook)
-            self.tableView.reloadData()
-            print(self.myBook)
-           // print (self.myBook)
-        }
         
         guard let userID = Auth.auth().currentUser?.uid else {
             fatalError("this user doesn't exist!")
@@ -43,9 +38,13 @@ class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
         }
         
-        
+        logOut.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        retrieveAllBooks()
     }
     
     @IBAction func addImgButton(_ sender: Any) {
@@ -56,6 +55,20 @@ class accountVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         present(cameraViewController, animated: true, completion: nil)
         
+    }
+    
+    func retrieveAllBooks(){
+        guard let uid = Networking.getUserId() else{
+            print("Coulndn't retreive books")
+            return
+        }
+        Networking.getListOf(COLLECTION_NAME: "users/\(uid)/books") { (book: [Book]) in
+            myBook = book
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.tableView.reloadData()
+            }
+            print("\(myBook)  🧙🏻‍♂️")
+        }
     }
     
     @IBAction func signOut(_ sender: Any) {

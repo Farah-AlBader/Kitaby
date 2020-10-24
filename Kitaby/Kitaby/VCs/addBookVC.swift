@@ -15,22 +15,26 @@ class addBookVC: UIViewController {
     @IBOutlet weak var bookWriterName: UITextField!
     @IBOutlet weak var categoryLabel: UITextField!
     @IBOutlet weak var PriceLabel: UITextField!
-    @IBOutlet weak var bookDescription: UITextField!
+    @IBOutlet weak var bookDescreption: UITextView!
+    
     
     let uid = Networking.getUserId()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
  self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.231713295, green: 0.4123639166, blue: 0.4694299102, alpha: 1)
         // Do any additional setup after loading the view.
+    
     }
     
-    @IBAction func addBookButton(_ sender: Any) {
-        let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescription.text!)
+    @IBAction func addBook(_ sender: Any) {
+        
+        let book = Book(name: bookNameLabel.text!, writer: bookWriterName.text!, category: categoryLabel.text!, price: Double(PriceLabel.text!)!, image: "", description: bookDescreption.text!)
         Networking.createItem(book, inCollection: "users/\(uid)/books") {
-            
             print("yaaaaaaay🥳")
         }
+        
         if categoryLabel.text == "children" {
             childrenBooks.append(book)
             print("\(childrenBooks)")
@@ -47,15 +51,4 @@ class addBookVC: UIViewController {
             print("this category is unavailable at the moment")
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
