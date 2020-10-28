@@ -1,0 +1,20 @@
+PODS:
+  - ALCameraViewController (3.1)
+  - CodableFirebase (0.2.1)
+
+DEPENDENCIES:
+  - ALCameraViewController
+  - CodableFirebase
+
+SPEC REPOS:
+  trunk:
+    - ALCameraViewController
+    - CodableFirebase
+
+SPEC CHECKSUMS:
+  ALCameraViewController: 144dea45fd749a623aafd8cb7b10cea88499fcc3
+  CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
+
+PODFILE CHECKSUM: 96ad7f3890509fe0f6512f7d998016e41be6e85e
+
+COCOAPODS: 1.10.0

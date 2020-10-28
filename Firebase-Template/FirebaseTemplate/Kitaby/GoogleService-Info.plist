@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1055482302604-gq0jhrq4rgt1b17v3qi280jdvc7o2bls.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1055482302604-gq0jhrq4rgt1b17v3qi280jdvc7o2bls</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAHBybd1Gqv3jswgvBiM2zYasmASRWgECo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1055482302604</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.farah.albader.Kitaby</string>
+	<key>PROJECT_ID</key>
+	<string>kitaby-efde9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kitaby-efde9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1055482302604:ios:f8fb870a5177f9c7fbaba9</string>
+	<key>DATABASE_URL</key>
+	<string>https://kitaby-efde9.firebaseio.com</string>
+</dict>
+</plist>
