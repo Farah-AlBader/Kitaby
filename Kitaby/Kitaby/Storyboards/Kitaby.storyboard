@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgV-Y6-Lly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="800"/>
+            <point key="canvasLocation" x="-4294" y="443"/>
         </scene>
         <!--BookVC-->
         <scene sceneID="ybg-fl-xwt">
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjY-mL-AUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="3659.5982142857142"/>
+            <point key="canvasLocation" x="-451" y="895"/>
         </scene>
         <!--cart-->
         <scene sceneID="r2B-rX-bzi">
@@ -211,7 +211,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VeG-MY-etK">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="VeG-MY-etK">
                                                     <rect key="frame" x="10" y="0.0" width="90" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxC-Lg-aXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594.20289855072474" y="2254.6875"/>
+            <point key="canvasLocation" x="-2781" y="1598"/>
         </scene>
         <!--account-->
         <scene sceneID="KSI-0M-WMF">
@@ -415,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dd0-FB-fXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="2254.6875"/>
+            <point key="canvasLocation" x="-2781" y="220"/>
         </scene>
         <!--Add BookVC-->
         <scene sceneID="Ad4-ZK-r89">
@@ -505,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x67-j6-eWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618.840579710145" y="2254.6875"/>
+            <point key="canvasLocation" x="-2000" y="-429"/>
         </scene>
         <!--LastVC-->
         <scene sceneID="p0G-Ad-wdd">
@@ -556,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODh-Jw-anx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1397.1014492753625" y="2254.6875"/>
+            <point key="canvasLocation" x="-2781" y="2315"/>
         </scene>
         <!--Home-->
         <scene sceneID="vAP-ud-CNL">
@@ -612,7 +612,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OlO-cT-BDI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="2255"/>
+            <point key="canvasLocation" x="-2000" y="895"/>
         </scene>
         <!--category-->
         <scene sceneID="vFU-eh-iyZ">
@@ -630,7 +630,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Qg-bb-SEG">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="5Qg-bb-SEG">
                                             <rect key="frame" x="10" y="0.0" width="90" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -680,18 +680,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOW-V7-Zaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="2981.9196428571427"/>
+            <point key="canvasLocation" x="-1214" y="895"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="k3N-14-szy">
             <objects>
                 <viewController id="U2n-6X-Com" customClass="SignUpVC" customModule="Kitaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F60-w6-CsB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="n3l-Lt-cAK">
-                                <rect key="frame" x="-11" y="-32" width="425" height="907"/>
+                                <rect key="frame" x="-7" y="-32" width="425" height="907"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-ZP-bcA">
@@ -803,7 +803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXV-vM-KD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="800"/>
+            <point key="canvasLocation" x="-4294" y="1240"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -867,7 +867,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="70"/>
+            <point key="canvasLocation" x="-5064" y="895"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uew-Sw-glm">
@@ -890,7 +890,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4f-Ik-GhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="1527"/>
+            <point key="canvasLocation" x="-2780" y="895"/>
         </scene>
         <!--Home-->
         <scene sceneID="XYN-SC-2I3">
@@ -911,7 +911,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTu-h5-u01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="1527"/>
+            <point key="canvasLocation" x="-3520" y="895"/>
         </scene>
         <!--My Book DetailsVC-->
         <scene sceneID="gYk-Tj-7Od">
@@ -977,16 +977,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fnj-sf-Bm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="2981.9196428571427"/>
+            <point key="canvasLocation" x="-2000" y="220"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mTw-kE-oiq"/>
+        <segue reference="9NI-k4-YNZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 7" width="318" height="300"/>
         <image name="background1" width="448" height="966"/>
         <image name="background2" width="448" height="970"/>
+        <image name="book" width="124" height="162"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>

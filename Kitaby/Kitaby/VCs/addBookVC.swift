@@ -48,7 +48,7 @@ class addBookVC: UIViewController {
         }else if categoryLabel.text == "romance"{
             romance.append(book)
             print("\(romance)")
-        }else if categoryLabel.text == "Fantasy"{
+        }else if categoryLabel.text == "fantasy"{
             fantasy.append(book)
             print(fantasy)
         }else {
